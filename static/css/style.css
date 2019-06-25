@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+.Jumbotron {
+ color: Red;   
+    
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-header {
+  position: relative;
+  font-size : 20px;  
+  text-align: center;
+  color: #B40404;
+}
+
+.inner {
+  position: inline;
+  font-size : 16px;  
+  text-align: left;
+  width:1200px;
+  padding : 30px 20px 30px 20px;
+}
+
+
+#adfuller, .Jumbotron {
+  position: relative;
+  text-align: center;
+  line-height:1.25;
+  color: brown;  
+  min-width: 1200px;
+}
+
+#description,
+#facts {
+  position: inline;
+  text-align: left;
+  width:1200px;
+  line-height:1.5;
+  margin-left : 50px  
+}
+
+
+#image_title {
+  position: inline;
+  color: brown;  
+  text-align: center;
+  height: 100%;
+  min-width: 1200px;
+}
+
+.nav-crime {
+  opacity :  position: relative;
+  text-align: center;
+  min-height: 100%;
+}
+
+
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+.hero {
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;
+  color : orange;
+  background: black;
+/*  background-image: url("../images/crime_classification.png");*/
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.hero h1 {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+
+/* keyframe animations which will be used to animate the title */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 7.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 5.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Final Project for Bootcamp Data Analytics</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+
+	<div class="wrapper">
+
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="Jumbotron text-center">
+			<h1>Miami Dade Crime Study (2015 to current) - June 2019</h1>
+			<p> by Yissel Fernandez, Cynthia Huallanca,  Emily Mo and Carolina Muizzi</p>
+			<a class="navbar-brand" href="index.html">
+			  <img class="nav-crime" src="{{ url_for('static', filename='images/cordened_off.jpg') }}"" style='width:1000px;height:300px; opacity:0.3;'>
+			</a>
+		  </div>
+		</div>
+	  </nav>
+	
+	  <section class='container' id="description">
+        <div class="inner">
+			<p>Miami Dade, Florida is the largest county in Florida. Its population is inching towards 3 million, of which, 
+				about 54% is foreign born.
+		</div>		
+		<div id="facts" style='display:block;'>
+			
+   			<p>Facts about Miami Dade :</p>
+			<p>    There is 51.45 % female and 48.55 % male in Miami Dade.</p>
+			<p>	    Adults over 25 : roughly one fifth has not received a high school diploma. </p>
+			<p>	    About 54% foreign background-color</p>
+		</div>		 
+
+        <div class="inner">
+  			<p>When analyzing the jail booking data, we found that almost a third was committed by homeless persons.  Homelessness 
+			   is on decline in Miami Dade in recent years. As of early 2019, there were 3628 homeless individuals or families in 
+			   Miami Dade.  1008 of those are unsheltered and 2620 are sheltered.  Thanks for Miami Dade Homeless Trust which is a
+			   county government office which reaches out to those sleeping on the streets to provide hot showers, indoor meals and 
+			   find affordable housing for them.  The goal of Miami Dade Homeless Trust is to prevent homelessness.
+				
+				However, booking and jailing homeless individuals due to their public drinking or small offences is not the real solution in preventing crime.
+				To put them in jail and when they return to society, they are still homeless and they are still aimless.  Without a secured job, without a place
+				of their own, they will likey repeat breaking the laws.
+				
+				A homeless inmate costs taxpayers $230 per day
+			
+			</p>
+	  
+	  
+        </div>
+    </section>
+
+    
+<!--	<div id="main-weekdays"  style='background-color:#F3E2A9; padding-top:50px;'>
+		<section class="wrapper style1">
+ 			<div class="inner">
+				<h3 id='image_title' style='text-align:center;'>Crime by Weekdays : </h3>
+				<a><img src="{{ url_for('static', filename='images/crimesByWeekdays.png') }}" style="height:400px; width:1000px; margin-left:120px;" alt="" /></a>
+			</div>
+		</section>
+	-->
+    <div id="stationarity" style='background-color:#F3E2A9;'>
+		<section class="wrapper style2">
+			<div class="inner">
+				<h3 id='image_title' style='text-align:center;'>Stationarity Test : </h3>
+				<a><img src="{{ url_for('static', filename='images/stationarity_test.png') }}" style="width:1000px; margin-left:120px;" alt="" /></a>
+			</div>
+			<div id="adfuller">
+				
+				<ul style="list-style: none; text-align:center;">
+					<strong>
+						{% for name in results %}
+						<li>{{ name }}</li>
+					{% endfor %}
+					</strong>
+				</ul>
+			  </div>
+		</section>
+ 	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!--  <script src="{{ url_for('static', filename='js/index.js') }}"></script>-->
+</body>
+
+</html>

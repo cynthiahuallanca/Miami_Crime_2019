@@ -49,10 +49,6 @@ def scrape_info():
         soup = bs(html, 'html.parser')
 
         tbody = soup.find('tbody')
-        schools = []
-        address= []
-        phone = []
-        principal=[]
 
         all_td = tbody.find_all('td')
         

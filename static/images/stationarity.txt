@@ -1,0 +1,8 @@
+Results of the Dickey-Fuller Test:
+Test Statistics : -5.384357
+P-value : 0.000004
+No. of Lags Used: 23
+No. of Observations Used: 1452
+Critical Value (1%) : -3.434862
+Critical Value (5%) : -2.863533
+Critical Value (10%) : -2.567831
