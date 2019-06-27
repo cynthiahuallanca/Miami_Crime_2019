@@ -1,6 +1,6 @@
-<p align="center">
-  # Maimi Crime rate prediction for July 2019, using Machine Learning
-</p> 
+<h2 align="center">
+  Maimi Crime rate prediction for July 2019, using Machine Learning
+</h2> 
 
 
 ![alt text](/Resources/Miami-Dade%20police%20car.jpg)
@@ -14,7 +14,9 @@ So, being such a great attraction for tourists and moreover, nesting a quickly a
 
 Either you are thinking of living or going for vacations to Miami, 
 
-**<center> ¿Have you ever wondered about how's the crime? </center>**
+<p align="center">
+  <b>¿Have you ever wondered about how's the crime?</b>
+</p> 
 
 What if you could know if the crime will increase.. and what if you could find the zone that has less crime? ... The truth is that YOU CAN! 
 
