@@ -1,6 +1,8 @@
 # Maimi Crime rate prediction for July 2019
  
+![alt text]()
 ![alt text](https://www.miamiherald.com/news/local/community/miami-dade/jvsqxv/picture155872049/alternates/FREE_1140/Miami-Dade%20police%20car)
+
 
 When you think about going on vacation, have a good time and relax: you are describing Miami! 
 
