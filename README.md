@@ -1,5 +1,6 @@
-# Maimi Crime rate prediction for July 2019, using Machine Learning
-
+<p align="center">
+  # Maimi Crime rate prediction for July 2019, using Machine Learning
+</p> 
 
 
 ![alt text](/Resources/Miami-Dade%20police%20car.jpg)
