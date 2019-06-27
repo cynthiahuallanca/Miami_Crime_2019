@@ -2,7 +2,7 @@
 
 
 
-![alt text](https://www.miamiherald.com/news/local/community/miami-dade/jvsqxv/picture155872049/alternates/FREE_1140/Miami-Dade%20police%20car)
+![alt text](Resources/Miami-Dade police car.jpg)
 
 
 When you think about going on vacation, have a good time and relax: you are describing Miami! 
