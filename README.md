@@ -2,7 +2,7 @@
 
 
 
-![alt text](Resources/Miami-Dade police car.jpg)
+![alt text](/Resources/Miami-Dade police car.jpg)
 
 
 When you think about going on vacation, have a good time and relax: you are describing Miami! 
