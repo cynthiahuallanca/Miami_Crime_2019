@@ -1,4 +1,4 @@
-# Maimi Crime rate prediction for July 2019
+# Maimi Crime rate prediction for July 2019, using Machine Learning
 
 
 
