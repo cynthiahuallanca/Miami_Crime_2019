@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Miami Crime - Conclusions</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<!-- CH.Bring in our bootstrap stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style>
+			body, html {
+			  height: 100%;
+			  margin: 0;
+			  font: 400 15px/1.8 "Lato", sans-serif;
+			  color: #777;
+			}
+			
+			body {
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 20px;
+                }
+                
+                #myBtn {
+                  display: none;
+                  position: fixed;
+                  bottom: 20px;
+                  right: 30px;
+                  z-index: 99;
+                  font-size: 18px;
+                  border: none;
+                  outline: none;
+                  background-color: rgb(108, 168, 207);
+                  color: white;
+                  cursor: pointer;
+                  padding: 15px;
+                  border-radius: 4px;
+                }
+                
+                #myBtn:hover {
+                  background-color: #555;
+                }
+
+
+			.bgimg-1 {
+			  position: relative;
+			  opacity: 0.65;
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			
+			}
+			
+			.bgimg-1 {
+			  background-image: url("https://2012books.lardbucket.org/books/public-speaking-practice-and-ethics/section_14/59313256765936975e8b84d372465d61.jpg");
+			  min-height: 400px;
+			}
+			
+			.caption {
+			  position: absolute;
+			  left: 0;
+			  top: 50%;
+			  width: 100%;
+			  text-align: center;
+			  color: #000;
+			}
+			
+			.caption span.border {
+			  background-color: #111;
+			  color: #fff;
+			  padding: 18px;
+			  font-size: 25px;
+			  letter-spacing: 10px;
+			}
+			
+			h3 {
+			  letter-spacing: 5px;
+			  text-transform: uppercase;
+			  font: 20px "Lato", sans-serif;
+			  color: #111;
+			}
+			
+			/* Turn off parallax scrolling for tablets and phones */
+			@media only screen and (max-device-width: 1024px) {
+			  .bgimg-1, .bgimg-2, .bgimg-3 {
+				background-attachment: scroll;
+			  }
+			}
+		</style>
+
+	</head>
+
+	<body>
+			<!-- Button to go up -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+	<script>
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+				document.getElementById("myBtn").style.display = "block";
+				} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+	}
+
+		function topFunction() {
+			document.body.scrollTop = 30;
+			document.documentElement.scrollTop = 30;
+	}
+	</script>
+
+		<!-- Image -->
+		<div class="bgimg-1">
+			<div class="caption">
+				<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+			</div>
+		</div>
+	
+	<!-- Navbar -->
+	<div class="container">
+		<nav class="navbar navbar-light bg-light">
+			<form class="form-inline">
+				<button class="btn btn-outline-success" onclick ="location.href='/'" type="button">Home</button>
+				<button class="btn btn-outline-success" onclick="location.href='crime_rate'" type="button">Categories</button>
+				<button class="btn btn-outline-success" onclick ="location.href='crime_rate_by_city'" type="button">Dashboard</button>
+				<button class="btn btn-outline-success" onclick ="location.href='crime_type_by_city'" type="button">Crime by City and Type</button>
+				<button class="btn btn-outline-success" onclick ="location.href='homeless'" type="button">Homeless Situation</button>
+				<button class="btn btn-outline-success" onclick ="location.href='machinelng'" type="button">Machine Learning</button>
+				<button class="btn btn-outline-success" onclick ="location.href='conclusion'" type="button">Conclusions & Recommendations</button>
+				<button class="btn btn-outline-success" onclick ="location.href='about'" type="button">About Us</button>
+			</form>
+		</nav>
+	</div>
+	
+	 <section class='container'>
+		<h3> Conclusions </h3>
+		<ul> 
+			<li> Despite following all steps and recommendations, we did not achieve an accurate score because the lack of data divided by year/month. 	</li>
+			<li>We did extract information about Census, current Schools and Police Stations (via Scrape) and unemployment rate in Florida. The main difficulty was that in order to predict we need data divided by year and month, so everything can be in the same scale. </li>
+			<li>Other path would it be adding more history of crimes, but unfortunately Miami Inly provide data from 2015 up to today </li>
+			<li>As you can see in tab "Homeless Situation", half of Miami crime is commited for homeless people. Taking action on their situation will impact radically local rates.</li>
+		</ul>
+
+		<br>
+		
+		<h3> Recommendations </h3>
+		<ul> 
+			<ul> <strong>For Miami Dade Open Data Hub </strong> 
+				<li> The system from where each defendat it's logged into the database needs to add a drop down list with the cities. This will eliminate all ortographic errors on city parameter. 
+					Fourt Lauderdale was written wronly 17 times for example and Miami was written in 8 different ways (MI, MIAM,MIAMIWN, MIAAMI, MAIMI, MIAI, MIAIMI, MIAMI)
+				</li>
+			</ul>
+			<br>
+			<ul> <strong>For Future Analysis</strong>
+			<li>The model could be improved by training more data. For that, obtain more features and history of crimes by month or year.</li>
+			<li>Would be interesting to add Census Data (population, income, poverty rates) but be aware that it's ony available by year.</li>
+			<li>We didn’t add Race in our study, because etic is also part of our job.</li></ul>
+		</ul>
+		
+		<br>
+
+		<h3> Links & Process </h3>
+			<ul>
+				<li> Extraction of data from <a target="https://gis-mdc.opendata.arcgis.com/datasets/jail-bookings-may-29-2015-to-current" href="https://gis-mdc.opendata.arcgis.com/datasets/jail-bookings-may-29-2015-to-current">Miami Dade Open Data Hub </a> </li>
+				<li> Scrape of Schools, Police Stations</li>
+				<li> <a target="https://developer.mapquest.com/" href="https://developer.mapquest.com/">Mapquest API</a> for latitude and Longitude</li>
+			</ul>
+		
+			<br><br>
+		</div>		
+
+    </section>
+
+    
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Final Project for Bootcamp Data Analytics</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+
+	<div class="wrapper">
+
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="Jumbotron text-center"  style="padding-top:20px;padding-bottom:20px;">
+			<h1>Miami Dade Crime Study (2015 to current) - June 2019</h1>
+			<h2> Machine Learning </h2>
+		  </div>
+		</div>
+	  </nav>
+	
+
+
+	 <div id="random-forest" style='background-color:#F7BE81;'>
+			<section class="wrapper style2">
+				<div class="inner">
+					<h3 id='image_title' style='text-align:center;'>Random Forest : </h3>
+					<a><img src="{{ url_for('static', filename='images/Random_Forest.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+					<a><img src="{{ url_for('static', filename='images/Random_Forest_Residual_Plot.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+				</div>
+			</section>
+	 </div>
+	
+	 <div id="linear_regression" style='background-color:#F7BE81;'>
+			<section class="wrapper style2">
+				<div class="inner">
+					<h3 id='image_title' style='text-align:center;'>Residual Plot : </h3>
+					<a><img src="{{ url_for('static', filename='images/Linear_Regression.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+					<a><img src="{{ url_for('static', filename='images/Linear_Regression_Residual_Plot.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+				</div>
+			</section>
+	 </div>
+	
+	 <div id="svr" style='background-color:#F7BE81;'>
+		<section class="wrapper style2">
+			<div class="inner">
+				<h3 id='image_title' style='text-align:center;'>Residual Plot : </h3>
+				<a><img src="{{ url_for('static', filename='images/SVR.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+				<a><img src="{{ url_for('static', filename='images/SVR_Residual_Plot.png') }}" style="width:350px; height:350px; margin-left:80px;" alt="" /></a>
+			</div>
+		</section>
+ </div>
+
+
+
+	</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+
+</html>

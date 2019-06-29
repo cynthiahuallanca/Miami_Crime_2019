@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Miami Crime - Categories</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<!-- CH.Bring in our bootstrap stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style>
+			body, html {
+			  height: 100%;
+			  margin: 0;
+			  font: 400 15px/1.8 "Lato", sans-serif;
+			  color: #777;
+			}
+			
+			.bgimg-1, .bgimg-2 {
+			  position: relative;
+			  opacity: 0.65;
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			
+			}
+			.bgimg-1 {
+			  background-image: url("https://www.visitflorida.com/content/dam/visitflorida/en-us/images/cities/miami/Downtown2011_08.jpg.1280.500.rendition");
+			  min-height: 100%;
+			}
+			
+			.bgimg-2 {
+			  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/13004/production/_103482877_homeless.jpg");
+			  min-height: 400px;
+			}
+			
+			.caption {
+			  position: absolute;
+			  left: 0;
+			  top: 50%;
+			  width: 100%;
+			  text-align: center;
+			  color: #000;
+			}
+			
+			.caption span.border {
+			  background-color: #111;
+			  color: #fff;
+			  padding: 18px;
+			  font-size: 25px;
+			  letter-spacing: 10px;
+			}
+			
+			h3 {
+			  letter-spacing: 5px;
+			  text-transform: uppercase;
+			  font: 20px "Lato", sans-serif;
+			  color: #111;
+			}
+			
+			#myBtn {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			font-size: 18px;
+			border: none;
+			outline: none;
+			background-color: rgb(108, 168, 207);
+			color: white;
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 4px;
+		  }
+		  
+		  #myBtn:hover {
+			background-color: #555;
+		  }
+
+
+
+
+			/* Turn off parallax scrolling for tablets and phones */
+			@media only screen and (max-device-width: 1024px) {
+			  .bgimg-1, .bgimg-2, .bgimg-3 {
+				background-attachment: scroll;
+			  }
+			}
+		</style>
+	</head>
+	
+	<body>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			<script>
+					// When the user scrolls down 20px from the top of the document, show the button
+					window.onscroll = function() {scrollFunction()};
+					
+					function scrollFunction() {
+					  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+						document.getElementById("myBtn").style.display = "block";
+					  } else {
+						document.getElementById("myBtn").style.display = "none";
+					  }
+					}
+					
+					// When the user clicks on the button, scroll to the top of the document
+					function topFunction() {
+					  document.body.scrollTop = 0;
+					  document.documentElement.scrollTop = 0;
+					}
+			</script>
+	
+		<!-- Description Dashboard-->
+		<div style="position:relative;">
+			<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+				<h3 style="color:#ddd">Crime Categories</h3>
+				<br>
+				<p> The visualizations that you're about to see, are based on Category of crimes extracted from Florida Statutes and Laws.</p>		
+			</div>
+		</div>
+		
+		<!-- Navbar -->
+		<div class="container">
+			<nav class="navbar navbar-light bg-light">
+				<form class="form-inline">
+					<button class="btn btn-outline-success" onclick ="location.href='/'" type="button">Home</button>
+					<button class="btn btn-outline-success" onclick="location.href='crime_rate'" type="button">Categories</button>
+					<button class="btn btn-outline-success" onclick ="location.href='crime_rate_by_city'" type="button">Dashboard</button>
+					<button class="btn btn-outline-success" onclick ="location.href='crime_type_by_city'" type="button">Crime by City and Type</button>
+					<button class="btn btn-outline-success" onclick ="location.href='homeless'" type="button">Homeless Situation</button>
+					<button class="btn btn-outline-success" onclick ="location.href='machinelng'" type="button">Machine Learning</button>
+					<button class="btn btn-outline-success" onclick ="location.href='conclusion'" type="button">Conlusions & Recommendations</button>
+					<button class="btn btn-outline-success" onclick ="location.href='about'" type="button">About Us</button>
+				</form>
+			</nav>
+		</div>
+
+
+	<!-- Iteractive Chart: Crime by Category -->
+	
+
+		<div class="container">
+			<div class='tableauPlaceholder' id='viz1561676193527' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JJ&#47;JJCP95BFK&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;JJCP95BFK' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JJ&#47;JJCP95BFK&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+			</div>                
+		</div>
+
+
+<script type='text/javascript'>                    
+	var divElement = document.getElementById('viz1561676193527');                   
+	var vizElement = divElement.getElementsByTagName('object')[0];                    
+	vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+	var scriptElement = document.createElement('script');                    
+	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+	vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+</script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+
+</body>
+
+</html>

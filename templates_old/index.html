@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Final Project for Bootcamp Data Analytics</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+
+	<div class="wrapper">
+
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="Jumbotron text-center" style="padding-top:20px;padding-bottom:20px;">
+			<h1>Miami Dade Crime Study (2015 to current) - June 2019</h1>
+			<p> by Yissel Fernandez, Cynthia Huallanca,  Emily Mo and Carolina Muizzi</p>
+		</div>
+		<br>
+		<a class="navbar-brand" href="index.html">
+		  <img class="nav-crime" src="{{ url_for('static', filename='images/cordened_off.jpg') }}" style='width:800px;height:300px; opacity:0.4; margin-left:300px;'>
+		</a>
+		  </div>
+	  </nav>
+	
+	  <section class='container' id="description">
+    	<p>Miami Dade, Florida is the largest county in Florida. It is home to 2.7 million people.
+		It is the nation's fourth largest school district. It's the seventh largest metropolitan area in the USA.
+		Miami is the fourth hottest city and the seventh rainiest city in the country.
+		
+		<div id="facts" style='display:block;'>
+			  
+   			<p>Facts about Miami Dade :</p>
+			  <ul class="b">
+				<li>51.45 % female and 48.55 % male</li>
+				<li>Adults over 25 : roughly one fifth has not received a high school diploma</li>
+				<li>About 54% foreign born</li>
+				<li>about 29% speak Spanish only</li>
+				<li>about 27% English-speaking individuals </li>
+				<li>20% under 18 years of age </li>
+				<li>16% over 65 years old</li>
+				<li>Median household income : $46,338 </li>
+				<li>Poverty : 16.7% </p>
+			</ul>
+		</div>		 
+
+
+		<div class="container">
+			<div class='tableauPlaceholder' id='viz1561676193527' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JJ&#47;JJCP95BFK&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;JJCP95BFK' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JJ&#47;JJCP95BFK&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+			</div>                
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			    <button class = "next" onclick ="location.href='crime_rate'" type="button">&#8658;</button>
+			</div>
+    </section>
+	</div>	
+   
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!--  <script src="{{ url_for('static', filename='js/index.js') }}"></script>-->
+
+
+<script type='text/javascript'>                    
+var divElement = document.getElementById('viz1561676193527');                   
+var vizElement = divElement.getElementsByTagName('object')[0];                    
+vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+var scriptElement = document.createElement('script');                    
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+</script>
+	
+	
+</body>
+
+</html>

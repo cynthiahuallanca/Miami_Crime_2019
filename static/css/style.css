@@ -4,7 +4,8 @@
 }
 
 .Jumbotron {
- color: Red;   
+ color: Red; 
+ background-color:#F7BE81;   
     
 }
 
@@ -26,9 +27,34 @@ body {
   position: inline;
   font-size : 16px;  
   text-align: left;
-  width:1200px;
-  padding : 30px 20px 30px 20px;
+  width:1000px;
+  padding : 0 20px 30px 20px;
 }
+
+
+.tableauPlaceholder {
+  border-style: solid;
+  padding : 30px 20px 0 20px;
+ }
+
+.tableauToo {
+  margin : 20, 80, 0, 20;
+ }
+
+
+.next {
+  background-color:white;
+  float : right;
+  width :80px;
+  font-weight:500;
+  font-size:2em;
+  
+}
+
+ul.square {
+  list-style-type: square;
+}
+
 
 
 #adfuller, .Jumbotron {
@@ -36,16 +62,34 @@ body {
   text-align: center;
   line-height:1.25;
   color: brown;  
-  min-width: 1200px;
+  width : 90%
+  margin: 20,20,20,20;
+  padding:30,30,30,30;
+    
 }
 
 #description,
 #facts {
   position: inline;
   text-align: left;
-  width:1200px;
+  width:1000px;
   line-height:1.5;
-  margin-left : 50px  
+  margin-left : 200px;
+  margin-right:200px;
+  padding : 20px 20px 0 20px;
+
+}
+
+#description-homeless
+ {
+  position: inline;
+  text-align: left;
+  width:800px;
+  line-height:1.5;
+  margin-left : 100px;
+  margin-right:100px;
+  padding : 20px 20px 0 20px;
+
 }
 
 

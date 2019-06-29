@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Final Project for Bootcamp Data Analytics</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+
+	<div class="wrapper">
+
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="Jumbotron text-center"  style="padding-top:20px;padding-bottom:20px;">
+			<h1>Miami Dade Crime Study (2015 to current) - June 2019</h1>
+			<h3> Crime Committed by Homeless Individuals</p>
+		  </div>
+		</div>
+	  </nav>
+	
+	  <section class='container' id="description-homeless">
+        <div class="inner">
+  			<p>When analyzing the jail booking data, we found that almost a third was committed by homeless persons.  Homelessness 
+			   is on decline in Miami Dade in recent years. As of early 2019, there were 3628 homeless individuals or families in 
+			   Miami Dade.  1008 of those are unsheltered and 2620 are sheltered.  Thanks for Miami Dade Homeless Trust which is a
+			   county government office which reaches out to those sleeping on the streets to provide hot showers, indoor meals and 
+			   find affordable housing for them.  The goal of Miami Dade Homeless Trust is to prevent homelessness.
+		   <br>
+		   <br>
+				However, booking and jailing homeless individuals due to their public drinking or small offences is not the real 
+				solution in preventing crime.  To put them in jail and when they return to society, they are still homeless and 
+				they are still aimless.  Without a secured job, without a place of their own, they will likey repeat breaking the laws.
+				<br>
+				<br>
+				A homeless inmate costs taxpayers $230 per day. To arrest them for small offences is not the most cost-effective way to 
+				help them out of the streets and be law-abiding citizens.
+
+				<a href="http://www.homelesstrust.org/" target="_blank">Link to Miami-Dade Homeless Trust</a>
+
+			</p>
+			<br>
+			<div class='tableauPlaceholder' id='viz1561724912734' style='position: relative;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ja&#47;jail-booking-Homelessness&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='jail-booking-Homelessness&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ja&#47;jail-booking-Homelessness&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                
+				
+			<br>
+			<br>
+			<div class="row">
+			  <button class = "next" onclick ="location.href='machinelng'" type="button">&#8658;</button>
+		  </div>
+	  
+		</section>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script type='text/javascript'>                    
+	var divElement = document.getElementById('viz1561724912734');                    
+	var vizElement = divElement.getElementsByTagName('object')[0];                    
+	vizElement.style.minWidth='420px';
+	vizElement.style.maxWidth='650px';
+	vizElement.style.width='100%';
+	vizElement.style.minHeight='587px';
+	vizElement.style.maxHeight='887px';
+	vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+	var scriptElement = document.createElement('script');                    
+	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+	vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+</script>
+	
+</body>
+
+</html>
