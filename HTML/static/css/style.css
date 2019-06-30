@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+.Jumbotron {
+ color: Red; 
+ background-color:#F7BE81;   
+    
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-header {
+  position: relative;
+  font-size : 20px;  
+  text-align: center;
+  color: #B40404;
+}
+
+.inner {
+  position: inline;
+  font-size : 16px;  
+  text-align: left;
+  width:1000px;
+  padding : 0 20px 30px 20px;
+}
+
+
+.tableauPlaceholder {
+  border-style: solid;
+  padding : 30px 20px 0 20px;
+ }
+
+.tableauToo {
+  margin : 20, 80, 0, 20;
+ }
+
+
+.next {
+  background-color:white;
+  float : right;
+  width :80px;
+  font-weight:500;
+  font-size:2em;
+  
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+
+
+#adfuller, .Jumbotron {
+  position: relative;
+  text-align: center;
+  line-height:1.25;
+  color: brown;  
+  width : 90%
+  margin: 20,20,20,20;
+  padding:30,30,30,30;
+    
+}
+
+#description,
+#facts {
+  position: inline;
+  text-align: left;
+  width:1000px;
+  line-height:1.5;
+  margin-left : 200px;
+  margin-right:200px;
+  padding : 20px 20px 0 20px;
+
+}
+
+#description-homeless
+ {
+  position: inline;
+  text-align: left;
+  width:800px;
+  line-height:1.5;
+  margin-left : 100px;
+  margin-right:100px;
+  padding : 20px 20px 0 20px;
+
+}
+
+
+#image_title {
+  position: inline;
+  color: brown;  
+  text-align: center;
+  height: 100%;
+  min-width: 1200px;
+}
+
+.nav-crime {
+  opacity :  position: relative;
+  text-align: center;
+  min-height: 100%;
+}
+
+
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+.hero {
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;
+  color : orange;
+  background: black;
+/*  background-image: url("../images/crime_classification.png");*/
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.hero h1 {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+
+/* keyframe animations which will be used to animate the title */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 7.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 5.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

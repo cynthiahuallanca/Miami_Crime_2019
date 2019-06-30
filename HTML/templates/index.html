@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Final Project for Bootcamp Data Analytics</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<!-- CH.Bring in our bootstrap stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style>
+			body, html {
+			  height: 100%;
+			  margin: 0;
+			  font: 400 15px/1.8 "Lato", sans-serif;
+			  color: #777;
+			}
+			
+			.bgimg-1, .bgimg-2, .bgimg-3 {
+			  position: relative;
+			  opacity: 0.65;
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			
+			}
+			.bgimg-1 {
+			  background-image: url("https://www.visitflorida.com/content/dam/visitflorida/en-us/images/cities/miami/Downtown2011_08.jpg.1280.500.rendition");
+			  min-height: 100%;
+			}
+			
+			.bgimg-3 {
+			  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/13004/production/_103482877_homeless.jpg");
+			  min-height: 400px;
+			}
+			
+			.caption {
+			  position: absolute;
+			  left: 0;
+			  top: 50%;
+			  width: 100%;
+			  text-align: center;
+			  color: #000;
+			}
+			
+			.caption span.border {
+			  background-color: #111;
+			  color: #fff;
+			  padding: 18px;
+			  font-size: 25px;
+			  letter-spacing: 10px;
+			}
+			
+			h3 {
+			  letter-spacing: 5px;
+			  text-transform: uppercase;
+			  font: 20px "Lato", sans-serif;
+			  color: #111;
+			}
+			
+			/* Turn off parallax scrolling for tablets and phones */
+			@media only screen and (max-device-width: 1024px) {
+			  .bgimg-1, .bgimg-2, .bgimg-3 {
+				background-attachment: scroll
+			  }
+			}
+			</style>
+			<style>
+					body {
+					  font-family: Arial, Helvetica, sans-serif;
+					  font-size: 20px;
+					}
+					
+					#myBtn {
+					  display: none;
+					  position: fixed;
+					  bottom: 20px;
+					  right: 30px;
+					  z-index: 99;
+					  font-size: 18px;
+					  border: none;
+					  outline: none;
+					  background-color: rgb(108, 168, 207);
+					  color: white;
+					  cursor: pointer;
+					  padding: 15px;
+					  border-radius: 4px;
+					}
+					
+					#myBtn:hover {
+					  background-color: #555;
+					}
+					</style>
+	</head>
+	<body>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+				
+				function scrollFunction() {
+				  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+					document.getElementById("myBtn").style.display = "block";
+				  } else {
+					document.getElementById("myBtn").style.display = "none";
+				  }
+				}
+				
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+				</script>
+
+		<!-- First Image -->
+		<div class="bgimg-1">
+			<div class="caption">
+			<span class="border" style="background-color:black;font-size:45px;color: #f7f7f7;">Miami Crime Prediction Project, 2019</span>
+			<br>
+			<span  style="background-color:black;font-size:20px;color: #f7f7f7;"> by Yissel Fernandez, Cynthia Huallanca,  Emily Mo and Carolina Muizzi</span>
+			</div>
+		</div>
+		
+		<!-- Navbar -->
+		<div class="container">
+		<nav class="navbar navbar-light bg-light">
+			<form class="form-inline">
+				<button class="btn btn-outline-success" onclick ="location.href='/'" type="button">Home</button>
+				<button class="btn btn-outline-success" onclick="location.href='crime_rate'" type="button">Categories</button>
+				<button class="btn btn-outline-success" onclick ="location.href='crime_rate_by_city'" type="button">Dashboard</button>
+				<button class="btn btn-outline-success" onclick ="location.href='crime_type_by_city'" type="button">Crime by City and Type</button>
+				<button class="btn btn-outline-success" onclick ="location.href='homeless'" type="button">Homeless Situation</button>
+				<button class="btn btn-outline-success" onclick ="location.href='machinelng'" type="button">Prediction</button>
+				<button class="btn btn-outline-success" onclick ="location.href='conclusion'" type="button">Conlusions & Recommendations</button>
+				<button class="btn btn-outline-success" onclick ="location.href='about'" type="button">About Us</button>
+				</form>
+			  </nav>
+			</div>
+
+
+		<!-- Introduction -->
+		<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+			<h3 style="text-align:center;">About Miami, Florida </h3>
+			<br>
+			<p>Miami Dade, Florida is the largest county in Florida, US. It is home to 2.7 million people. It is the nation's fourth largest school district. It's the seventh largest metropolitan area in the USA. Miami is the fourth hottest city and the seventh rainiest city in the country.
+		<br>
+			<p>Facts about Miami Dade :</p>
+			<ul class="b">
+				<li>51.45 % female and 48.55 % male</li>
+				<li>Adults over 25 : roughly one fifth has not received a high school diploma</li>
+				<li>About 54% foreign born</li>
+				<li>about 29% speak Spanish only</li>
+				<li>about 27% English-speaking individuals </li>
+				<li>20% under 18 years of age </li>
+				<li>16% over 65 years old</li>
+				<li>Median household income : $46,338 </li>
+				<li>Poverty : 16.7% </p>
+			</ul>
+			</p>
+			<br>
+			
+			<p>So, being such a great attraction for tourists and moreover, nesting a quickly ascending population, one of the top priorities should be the crime, right?</p>
+			<p>Either if you are thinking of living or going for vacations:</p> 		
+				<br>
+			<h3 style="text-align:center"> <strong> ¿Have you ever wondered about how's the crime in Miami, FL?</strong></h3>
+				<br><br>
+			<p> The purpose of this project, it's to predict Crime in Miami for the next months, using Machine Learning's Algorithm</p>
+				<br>
+			<p>Along the development and towards the delivery, you'll see different techniques and tools to form and analyze the data, up to clear and informative visualizations that we hope will be useful for anyone that is wondering about crime, either the Police that it may want to know where and how a station should be, a family searching for a new safe place to live with kids or a tourist thinking on party.</p>
+				<br>
+			<h4><i>Welcome to the future!</i></h4>
+				<br>
+		</div>
+		<br>
+	</div> 
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/crime_rate.js') }}"></script>
+
+<script type='text/javascript'>
+	var divElement = document.getElementById('viz1561691111785');
+	var vizElement = divElement.getElementsByTagName('object')[0];    
+	vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+	var scriptElement = document.createElement('script');                    
+	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+	vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+</script>
+
+</body>
+</html>
